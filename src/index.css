@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #ff6b35;
+  --color-brand-orange-dark: #e4552a;
+  --color-brand-gold: #d4af37;
+  --color-brand-bg: #0f0f0f;
+  --color-brand-surface: #1a1a1a;
+  --color-brand-black: #0f0f0f;
+  --color-brand-white: #ffffff;
+  --color-brand-muted: #b0b0b0;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --ease-theater: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-brand-bg);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 400ms var(--ease-theater) both;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
