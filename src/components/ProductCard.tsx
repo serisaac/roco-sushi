@@ -1,4 +1,4 @@
-import { ArrowRight, Flame } from "lucide-react";
+import { Flame } from "lucide-react";
 import type { MenuCategory, MenuItem } from "../data/menu";
 import { isSpicy } from "../lib/badges";
 
@@ -36,14 +36,9 @@ export function ProductCard({ item, category, index }: ProductCardProps) {
             {item.description}
           </p>
         )}
-        <div className="mt-3 flex items-center justify-between">
-          <span className="font-display text-lg font-bold text-brand-gold">
-            ${item.price}
-          </span>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-white">
-            <ArrowRight className="h-4 w-4" />
-          </div>
-        </div>
+        <span className="mt-3 block font-display text-lg font-bold text-brand-gold">
+          ${item.price}
+        </span>
       </div>
     </li>
   );
